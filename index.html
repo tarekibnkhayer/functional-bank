@@ -9,10 +9,26 @@
 </head>
 <body class="max-w-screen-xl mx-auto">
     <header>
-        <h1 class="text-center text-6xl mt-16 font-medium">Welcome to<span class="text-green-400"> The Digital Bank</span> of Bangladesh</h1>
+        <h1 class="text-center text-6xl mt-16 font-medium">Welcome to<span class="text-emerald-400"> The Digital Bank</span> of Bangladesh</h1>
     </header>
     <main>
-        
+        <section class="bg-blue-400 p-8 space-y-4 mt-16 pt-16 pb-12 pl-12">
+            <input type="email" id="emailField" class="w-9/12 py-4 px-8" placeholder="Please give your email address">
+            <br>
+            <input type="password" name="" id="passwordField" class="w-9/12 py-4 px-8" placeholder="Please give your password ">
+            <br>
+            <button id="submitButton" class="bg-amber-400 px-8 py-4 rounded-lg text-white font-semibold text-2xl">Submit</button>
+        </section>
     </main>
+    <script>
+        document.getElementById("submitButton").addEventListener("click", function(){
+            const email = document.getElementById("emailField").value;
+            const password = document.getElementById("passwordField").value;
+            if (email == "tarek@gmail.com" && password == 1234){
+                location.href = "user-account.html"
+            }
+            else{alert("invalid user")};
+        })
+    </script>
 </body>
 </html>
